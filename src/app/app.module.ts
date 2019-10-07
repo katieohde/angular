@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatExpansionModule } from '@angular/material';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,15 +14,16 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PostCreateComponent,
     HeaderComponent,
+    PostCreateComponent,
     PostListComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,
